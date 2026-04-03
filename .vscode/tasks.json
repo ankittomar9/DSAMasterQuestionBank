@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile and run (Bash)",
+            "type": "shell",
+            "options": {
+                "shell": {
+                    "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+                    "args": ["-c"]
+                }
+            },
+            // Changed semicolons (;) to double ampersands (&&) below
+            "command": "mkdir -p out; javac -d out \"${relativeFile}\" && className=$(echo \"${relativeFile}\" | sed 's|\\\\\\\\|.|g' | sed 's|.java||') && java -cp out \"$className\" < input.txt > output.txt",
+            "presentation": {
+                "echo": false,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "owner": "java",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "severity": 3,
+                    "message": 4
+                }
+            }
+        }
+    ]
+}
