@@ -1,0 +1,10 @@
+# Ignore the node_modules folder
+.vscode/
+
+# Ignore the logs folder
+out/*.class
+
+# Ignore the build folder
+*.class
+
+.idea
