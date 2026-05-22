@@ -35,3 +35,25 @@ public class Q_22_Zigzag_Conversion {
 
 }
 
+package LeetCode150.LeetCode150_1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Q_24_Text_Justification {
+
+    public static void main(String[] args) {
+        String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
+        int maxWidth = 16;
+
+        System.out.println("Input Words : " + java.util.Arrays.toString(words));
+        System.out.println("Max Width   : " + maxWidth);
+        System.out.println("Justified Text:");
+
+        List<String> result = fullJustify(words, maxWidth);
+
+        // Traditional loop instead of for-each
+        for (int i = 0; i < result.size(); i++) {
+            System.out.println(result.get(i));
+        }
+    }
