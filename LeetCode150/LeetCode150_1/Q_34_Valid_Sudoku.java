@@ -27,13 +27,17 @@ public class Q_34_Valid_Sudoku {
                     continue;
                 }
                   int num=board[i][j]-'1';
-            }
-          
+                  int boxIndex=(i/3)*3+(j/3);
 
-
-
+                if(rows[i][num] || columns[j][num] || boxes[boxIndex][num]){
+                    return false;
+                }
+                rows[i][num]=true;
+                columns[j][num]=true;
+                boxes[boxIndex][num]=true;
+            }          
+           
         }
-
-
+         return true;
     }
 }
