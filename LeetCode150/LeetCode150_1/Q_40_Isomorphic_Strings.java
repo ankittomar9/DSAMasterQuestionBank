@@ -2,7 +2,15 @@ package LeetCode150.LeetCode150_1;
 
 public class Q_40_Isomorphic_Strings {
     public static void main(String[] args) {
-        
+         String s1 = "egg";        String t1 = "add";
+           System.out.println("Input s : " + s1);
+        System.out.println("Input t : " + t1);
+        System.out.println("Output  : " + isIsomorphic(s1, t1));
+
+        String s2 = "foo";        String t2 = "bar";
+        System.out.println("\nInput s : " + s2);
+        System.out.println("Input t : " + t2);
+        System.out.println("Output  : " + isIsomorphic(s2, t2));
     }
     public static boolean isIsomorphic(String s ,String t){
         if(s==null || t==null ||s.length() !=t.length()){
