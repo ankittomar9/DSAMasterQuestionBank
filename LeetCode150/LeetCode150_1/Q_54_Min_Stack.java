@@ -1,11 +1,8 @@
 package LeetCode150.LeetCode150_1;
-
 import java.util.Stack;
-
 public class Q_54_Min_Stack {
     public static void main(String[] args) {
          MinStack minStack = new MinStack();
-
         minStack.push(-2);    minStack.push(0); minStack.push(-3);
         System.out.println("getMin() → " + minStack.getMin());  // -3
 
