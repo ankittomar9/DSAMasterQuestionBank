@@ -11,7 +11,7 @@ public class Q_57_Linked_List_Cycle {
         node0.next=node4;
         node4.next=node2;
         System.out.println("Input List with cycle: " + hasCycle(head1));
-
+       //    System.out.println("Input List with cycle: " + listToString(head1));
         // Test case 2: without cycle
         ListNode head2 = new ListNode(1);
         head2.next = new ListNode(2);
@@ -34,6 +34,21 @@ public class Q_57_Linked_List_Cycle {
         }
         return false;
     }
+    //  //Printing the LinkedList on Console 
+    //  public static String listToString(ListNode head){
+    //     StringBuilder sb=new StringBuilder();
+    //     sb.append("[");
+    //     ListNode temp=head;
+    //     while(temp!=null){
+    //         sb.append(temp.val);
+    //         if(temp.next!=null){
+    //             sb.append(",");
+    //         }
+    //         temp=temp.next;
+    //     }
+    //      sb.append("]");
+    //     return sb.toString();
+    // }
     public static class ListNode{
         int val; ListNode next;  ListNode(int x){ this.val=x;  this.next=null;    }
     }
