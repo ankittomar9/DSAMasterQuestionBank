@@ -1,5 +1,4 @@
 package LeetCode150.LeetCode150_1;
-
 public class Q_64_Remove_Duplicates_from_Sorted_List_II {
     public static void main(String[] args) {
     ListNode head1=new ListNode(1,new ListNode(2,
