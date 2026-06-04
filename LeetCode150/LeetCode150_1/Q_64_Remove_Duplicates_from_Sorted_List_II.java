@@ -12,11 +12,9 @@ public class Q_64_Remove_Duplicates_from_Sorted_List_II {
 
              System.out.println("\nInput List : "+listToString(head2));
              System.out.println(" Output    : "+listToString(deleteDuplicates(head2)));
-
     }
     public static ListNode deleteDuplicates(ListNode head){
         if(head==null|| head.next==null){return head;}
-        
         ListNode dummy= new ListNode(0);
         dummy.next=head;
         ListNode prev=dummy; ListNode current=head;
@@ -34,7 +32,6 @@ public class Q_64_Remove_Duplicates_from_Sorted_List_II {
             }
             return dummy.next;
     }
-
     public static String listToString(ListNode head){
         StringBuilder sb=new StringBuilder();
         sb.append("[");ListNode temp=head;
