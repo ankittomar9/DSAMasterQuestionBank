@@ -2,7 +2,17 @@ package LeetCode150.LeetCode150_1;
 
 public class Q_66_Partition_List {
     public static void main(String[] args) {
+        ListNode head1 = new ListNode(1, new ListNode(4, new ListNode(3, 
+            new ListNode(2, new ListNode(5, new ListNode(2))))));
+        ListNode head2 = new ListNode(2, new ListNode(1));
 
+           System.out.println("Input List : "+listToString(head1));
+        System.out.println("x          : 3");
+        System.out.println("Output     : " + listToString(partition(head1, 3)));
+
+            System.out.println("\nInput List : "+listToString(head2));
+        System.out.println("x          : 2");
+        System.out.println("Output     : " + listToString(partition(head2, 2)));
         
     }
     public static ListNode partition(ListNode head,int x){
@@ -16,7 +26,7 @@ public class Q_66_Partition_List {
                 low.next=current;
                 low=low.next;
             }else{
-                high.next=highDummy;
+                high.next=current;
                 high=high.next;
             }
             current=current.next;
