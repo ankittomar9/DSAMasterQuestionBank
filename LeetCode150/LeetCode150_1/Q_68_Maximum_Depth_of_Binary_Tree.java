@@ -16,7 +16,7 @@ public class Q_68_Maximum_Depth_of_Binary_Tree {
         if(root==null){            return 0;        }
         int leftHeight=maxDepth(root.left);
            int rightHeight=maxDepth(root.right);
-           return leftHeight+rightHeight+1;
+           return Math.max(leftHeight, leftHeight)+1;
     }
 
     public static class TreeNode{
