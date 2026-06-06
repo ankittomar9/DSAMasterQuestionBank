@@ -1,5 +1,4 @@
-Input  : [eat, tea, tan, ate, nat, bat]
-Output : [[eat, tea, ate], [bat], [tan, nat]]
-
-Input  : [a]
-Output : [[a]]
+Input postOrder : [9, 15, 7, 20, 3]
+Input Inorder  : [9, 3, 15, 20, 7]
+Tree constructed successfully.
+Root value     : 3

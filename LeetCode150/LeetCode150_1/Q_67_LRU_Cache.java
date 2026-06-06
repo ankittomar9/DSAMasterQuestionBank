@@ -56,21 +56,25 @@ public class Q_67_LRU_Cache {
             return node.value;
         }
 
-        public void put(int key,int value){
-            if(map.containsKey(key)){
-                Node node=map.get(key);
-                node.value=value;
-                removeNode(node);
-                addNode(node);
-            }else{
-                if(map.size()==capacity){
-                    map.remove(tail.prev.key);
-                    removeNode(tail.prev);
-                }
-            }
-            Node newNode =new Node(key,value);
-            map.put(key, newNode);
-            addNode(newNode);
-        }   
+        public void put(int key, int value) {
+    if (map.containsKey(key)) {
+        // Update existing node
+        Node node = map.get(key);
+        node.value = value;
+        removeNode(node);
+        addNode(node);
+    } else {
+        if (map.size() == capacity) {
+            // Evict least recently used
+            Node lru = tail.prev;
+            removeNode(lru);
+            map.remove(lru.key);
+        }
+        // Add new node
+        Node newNode = new Node(key, value);
+        map.put(key, newNode);
+        addNode(newNode);
+    }
+}
     }
 }

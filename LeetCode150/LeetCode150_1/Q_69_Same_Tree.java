@@ -1,5 +1,4 @@
 package LeetCode150.LeetCode150_1;
-
 public class Q_69_Same_Tree {
     public static void main(String[] args) {
          TreeNode p1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
