@@ -1,5 +1,4 @@
 package LeetCode150.LeetCode150_1;
-
 public class Q_89_Number_of_Islands {
     public static void main(String[] args) {
            char[][] grid = {
