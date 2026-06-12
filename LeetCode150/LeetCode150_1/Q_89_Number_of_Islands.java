@@ -9,8 +9,8 @@ public class Q_89_Number_of_Islands {
         };
          System.out.println("Input Grid:");
         printGrid(grid);
-        System.out.println("\nNumber of Islands: " + numIslands(grid));
-         System.out.println("\nNumber of Islands After Sunken: " );
+        System.out.println("\n Number of Islands: " + numIslands(grid));
+         System.out.println("\n Number of Islands After Sunken: " );
           printGrid(grid);
     }
     public static int numIslands(char[][] grid){
