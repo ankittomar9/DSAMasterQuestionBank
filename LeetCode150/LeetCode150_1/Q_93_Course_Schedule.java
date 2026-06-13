@@ -8,11 +8,9 @@ import java.util.Queue;
 
 public class Q_93_Course_Schedule {
     public static void main(String[] args) {
-        int numCourses1 = 2;
-        int[][] prerequisites1 = {{1, 0}};
+        int numCourses1 = 2;        int[][] prerequisites1 = {{1, 0}};
 
-        int numCourses2 = 2;
-        int[][] prerequisites2 = {{1, 0}, {0, 1}};
+        int numCourses2 = 2;        int[][] prerequisites2 = {{1, 0}, {0, 1}};
 
         System.out.println("numCourses   : " + numCourses1);
         System.out.println("Prerequisites: " + Arrays.deepToString(prerequisites1));
@@ -53,9 +51,6 @@ public class Q_93_Course_Schedule {
                 }
             }
         }
-                return processed ==numCourses;
-
-
-
+         return processed ==numCourses;
     }
 }
