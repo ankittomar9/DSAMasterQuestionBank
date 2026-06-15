@@ -2,13 +2,19 @@ package LeetCode150.LeetCode150_1;
 
 public class Q_98_Implement_Trie {
     public static void main(String[] args) {
-        
+          Trie trie = new Trie();
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));   // true
+        System.out.println(trie.search("app"));     // false
+        System.out.println(trie.startsWith("app")); // true
+        trie.insert("app");
+        System.out.println(trie.search("app"));     // true
     }
     public static class Trie{
         public TrieNode root;
         public Trie(){root=new TrieNode();}
-    }
-    public void insert(String word){
+    
+    public  void insert(String word){
         TrieNode node=root;
         for(char c: word.toCharArray()){
             int index=c-'a';
@@ -19,7 +25,7 @@ public class Q_98_Implement_Trie {
         }
         node.isEnd=true;
     }
-    public boolean search(String word){
+    public  boolean search(String word){
         TrieNode node=root;
         for(char c:word.toCharArray()){
             int index=c-'a';
@@ -44,5 +50,6 @@ public class Q_98_Implement_Trie {
     public static class TrieNode{
         TrieNode[] children =new TrieNode[26];
         boolean isEnd;
+    }
     }
 }
