@@ -26,16 +26,18 @@ public class Q_121_Kth_Largest_Element_in_an_Array {
         }
     }
     public static int partition(int[] nums,int left,int right){
-        int pivot =nums[right];int i=left;
-
-        for(int j=left;j<right;j++){
-            if(nums[j]<pivot){
-                swap(nums,i,j);
-                i++;
-            }
+      int pivotIndex = left + (int)(Math.random() * (right - left + 1));
+    swap(nums, pivotIndex, right); // move pivot to end
+    int pivot = nums[right];
+    int i = left;
+    for (int j = left; j < right; j++) {
+        if (nums[j] < pivot) {
+            swap(nums, i, j);
+            i++;
         }
-        swap(nums,i,right);
-        return i;
+    }
+    swap(nums, i, right);
+    return i;
     }
     public static void swap(int[] nums,int i,int j){
         int temp=nums[i];
