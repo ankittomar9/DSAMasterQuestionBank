@@ -1,0 +1,33 @@
+package LeetCode150.LeetCode150_1;
+
+public class Q_147_Edit_Distance {
+    public static void main(String[] args) {
+           System.out.println("Input : horse, ros \n Output :"+minDistance("horse", "ros"));           // 3
+        System.out.println("Input : intention, execution \n Output: "+minDistance("intention", "execution")); // 5
+    }
+    public static int minDistance(String word1,String word2){
+        int m=word1.length();int n=word2.length();
+
+        int[][] dp=new int[m+1][n+1];
+
+        for(int i=1;i<=m;i++){
+            dp[i][0]=i;
+        }
+        for(int j=1;j<=n;j++){
+            dp[0][j]=j;
+        }
+
+        for(int i=1;i<=m;i++){
+            for(int j=1;j<=n;j++){
+                if(word1.charAt(i-1) ==word2.charAt(j-1)){
+                    dp[i][j]=dp[i-1][j-1];
+                }else{
+                    int result1=Math.min(dp[i][j-1], dp[i-1][j-1]);
+                    int result2=Math.min(dp[i-1][j],result1);
+                    dp[i][j]=1+result2;
+                }
+            }
+        }
+        return dp[m][n];
+    }
+}
