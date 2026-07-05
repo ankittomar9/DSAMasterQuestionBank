@@ -10,6 +10,11 @@ public class Q_7_4Sum {
         int target1 = 0;
         System.out.println("nums = " + Arrays.toString(nums1) + ", target = " + target1);
         System.out.println("Output: " + fourSum(nums1, target1));
+          System.out.println();
+        int[] nums2 = {2, 2, 2, 2, 2};
+        int target2 = 8;
+        System.out.println("nums = " + Arrays.toString(nums2) + ", target = " + target2);
+        System.out.println("Output: " + fourSum(nums2, target2));
     }
     public static List<List<Integer>> fourSum(int[] nums,int target){
         List<List<Integer>> result=new ArrayList<>();
@@ -40,6 +45,7 @@ public class Q_7_4Sum {
                     }
                             leftPtr++;
                             rightPtr--;
+                    }
                     else if(sum<target){
                         leftPtr++;
                     }
@@ -51,5 +57,5 @@ public class Q_7_4Sum {
             }
     }
      return result;
-} 
+    } 
 }
