@@ -25,9 +25,10 @@ public class Q_7_4Sum {
 
         for(int i=0;i<n-3;i++){
             if(i>0 && nums[i]==nums[i-1]){
-                continue;}
-                  
+                continue;
+            }
                 for(int j=i+1;j<n-2;j++){
+                    if (j>i+1 && nums[j] == nums[j - 1]) continue;
                      int leftPtr=j+1;
                     int rightPtr=n-1;
                  while(leftPtr<rightPtr){
@@ -36,13 +37,9 @@ public class Q_7_4Sum {
                     if(sum==target){
                         result.add(Arrays.asList(nums[i],nums[j],nums[leftPtr],nums[rightPtr]));
                     
-                    while(leftPtr<rightPtr &&nums[rightPtr]==nums[leftPtr+1]) {
-                        leftPtr++; }
+                    while(leftPtr<rightPtr &&nums[rightPtr]==nums[leftPtr+1]) {      leftPtr++; }
                  
-                        
-                    while(leftPtr<rightPtr &&nums[rightPtr]==nums[leftPtr-1]) {
-                        leftPtr--; 
-                    }
+                    while(leftPtr<rightPtr &&nums[rightPtr]==nums[rightPtr-1]) {   rightPtr--;     }
                             leftPtr++;
                             rightPtr--;
                     }
