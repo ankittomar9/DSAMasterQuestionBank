@@ -1,5 +1,7 @@
 package LeetCodeAll.arrays;
 
+import java.util.ArrayList;
+
 public class Q_15_Sudoku_Solver {
     public static void main(String[] args) {
           char[][] board = {
@@ -22,4 +24,14 @@ public class Q_15_Sudoku_Solver {
         System.out.println("\nSolved Board:");
         printBoard(board);
     }
+    public static void solveSudoku(char[][] board){
+        boolean[][] rows=new boolean[9][9];
+        boolean[][] cols=new boolean[9][9];
+        boolean[][] boxes=new boolean[9][9];
+
+        List<int[]> emptyCelss=new ArrayList<>();
+
+        
+    }
+
 }
