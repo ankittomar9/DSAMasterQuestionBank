@@ -36,7 +36,7 @@ public class Q_22_Permutations_II {
             used[i]=false;
             current.remove(current.size()-1);
         }
-
+ 
     }
 
 }
