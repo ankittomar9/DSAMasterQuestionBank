@@ -1,6 +1,7 @@
 package LeetCodeAll.arrays;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Q_15_Sudoku_Solver {
     public static void main(String[] args) {
@@ -16,22 +17,22 @@ public class Q_15_Sudoku_Solver {
             {'.','.','.','.','8','.','.','7','9'}
         };
 
-        System.out.println("Input Board:");
-        printBoard(board);
-
-        solveSudoku(board);
-
-        System.out.println("\nSolved Board:");
-        printBoard(board);
+        System.out.println("Input Board:");        printBoard(board);
+        solveSudoku(board); System.out.println("\nSolved Board:"); printBoard(board);
     }
-    public static void solveSudoku(char[][] board){
+     public static void solveSudoku(char[][] board) {
+        solve(board);
+    }
+    public static boolean  solve(char[][] board){
         boolean[][] rows=new boolean[9][9];
         boolean[][] cols=new boolean[9][9];
         boolean[][] boxes=new boolean[9][9];
 
-        List<int[]> emptyCelss=new ArrayList<>();
+        List<int[]> emptyCells=new ArrayList<>();
 
         
     }
-
+ public static boolean isValid(char[][] board, int row, int col, char digit) {
+    
+ }
 }
