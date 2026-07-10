@@ -11,5 +11,7 @@ public class Q_72_Maximum_Gap {
         int[] nums5 = {100, 3, 2, 1, 4, 5, 6, 7};        System.out.println("nums = " + Arrays.toString(nums5));
         System.out.println("Maximum Gap: " + maximumGap(nums5));
     }
-    
+    public static int maximumGap(int[] nums){
+        
+    }
 }
