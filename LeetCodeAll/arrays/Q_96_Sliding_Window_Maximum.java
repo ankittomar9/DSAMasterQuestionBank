@@ -29,11 +29,11 @@ public class Q_96_Sliding_Window_Maximum {
 
         for(int i=0;i<n;i++){
 
-            while(!deque.isEmpty() && deque.peek()  <= i-k){
-                deque.poll();
+            while(!deque.isEmpty() && deque.peekFirst()  <= i-k){
+                deque.pollFirst();
             }
 
-            while(!deque.isEmpty() && nums[deque.peekFirst()]  <= nums[i]){
+            while(!deque.isEmpty() && nums[deque.peekLast()]  <= nums[i]){
                 deque.pollLast();
             }
 
