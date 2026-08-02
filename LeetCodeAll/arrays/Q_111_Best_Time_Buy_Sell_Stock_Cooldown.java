@@ -21,7 +21,24 @@ public class Q_111_Best_Time_Buy_Sell_Stock_Cooldown {
         System.out.println("Max Profit: " + maxProfit(prices3));
     }
     public static int maxProfit(int[] prices){
-        
+        int n=prices.length; 
+        if(n<=1) return 0;
+
+        int hold=-prices[0];
+        int sold=Integer.MIN_VALUE/2;
+        int rest=0;
+
+        for(int i=1;i<n;i++){
+            int newHold=Math.max(hold,rest-prices[i]);
+            int newSold=hold+prices[i];
+            int newRest=Math.max(rest,sold);
+
+            hold=newHold;
+            sold=newSold;
+            rest=newRest;
+
+        }
+        return Math.max(sold, rest);
     }
 
 }
