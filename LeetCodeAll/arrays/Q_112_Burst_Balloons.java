@@ -49,7 +49,7 @@ public static int maxCoins(int[] nums){
             }
         }
     }
-    return dp[0][];
+    return dp[0][n+1];
 }
 
 
