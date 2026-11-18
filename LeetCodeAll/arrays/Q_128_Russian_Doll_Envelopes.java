@@ -28,6 +28,7 @@ public class Q_128_Russian_Doll_Envelopes {
                     if(index<0){
                         index=-(index+1);
                     }
+                    tails[index]=h;
                     if(index==len) len++;
                 }
                 return len;

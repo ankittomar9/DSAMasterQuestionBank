@@ -37,7 +37,7 @@ public class Q_129_Max_Sum_Rectangle_No_Larger_Than_K {
             for(int right=left;right<n;right++){
                 for(int r=0;r<m;r++){
                     colSum[r] =colSum[r]+matrix[r][right];
-
+                }
                     TreeSet<Integer> set=new TreeSet<>();
                     set.add(0);
                     int curSum=0;
@@ -48,7 +48,7 @@ public class Q_129_Max_Sum_Rectangle_No_Larger_Than_K {
                         if(ceiling !=null ) maxSum=Math.max(maxSum,curSum-ceiling);
                         set.add(curSum);
                     }
-                }
+                
             }
         }
         return maxSum;
